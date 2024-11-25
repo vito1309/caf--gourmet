@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato - Café Gourmet</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <img src="assets/img/logo-cafe.png" alt="Logotipo Café Gourmet" class="logo">
+      <nav>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre Nós</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="contact-form">
+      <div class="container">
+        <h1>Entre em Contato</h1>
+        <p>Quer saber mais sobre nossos produtos? Envie-nos uma mensagem!</p>
+        <form id="contact-form" action="#" method="post">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="Seu email" required>
+
+          <label for="assunto">Assunto:</label>
+          <select id="assunto" name="assunto" required>
+            <option value="" disabled selected>Selecione um assunto</option>
+            <option value="produto">Informações sobre produtos</option>
+            <option value="pedido">Dúvidas sobre pedidos</option>
+            <option value="outros">Outros</option>
+          </select>
+
+          <label for="mensagem">Mensagem:</label>
+          <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem" required></textarea>
+
+          <button type="submit" class="btn">Enviar Mensagem</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Café Gourmet. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    const form = document.getElementById('contact-form');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      alert("Sua mensagem foi enviada com sucesso!");
+      form.reset();
+    });
+  </script>
+</body>
+</html>
